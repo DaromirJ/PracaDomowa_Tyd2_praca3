@@ -57,7 +57,7 @@ namespace PracaDomowa
             //    int a = 0;
             //    int b = 1;
 
-            //    Console.WriteLine($" Zadanie 3 (implementacja ciągu Fibonacciego i wyświetlenie go na ekranie)\r\n");
+            //    Console.WriteLine($"Zadanie 3 (implementacja ciągu Fibonacciego i wyświetlenie go na ekranie)\r\n");
             //    Console.WriteLine(a);
 
             //    for (int i = 0; i <= n; i++)
@@ -74,7 +74,7 @@ namespace PracaDomowa
             //    int a = int.Parse(Console.ReadLine());
             //    Console.WriteLine();
 
-            //    Console.WriteLine($" Zadanie 4 (Po podaniu liczby całkowitej wyświetla piramidę liczb od 1 do podanej liczby)\r\n");
+            //    Console.WriteLine($"Zadanie 4 (Po podaniu liczby całkowitej wyświetla piramidę liczb od 1 do podanej liczby)\r\n");
 
             //    int number = 1;
 
@@ -95,21 +95,14 @@ namespace PracaDomowa
             //    }
             //}
 
-            //Zadanie 5 (czy możesz się ubiegać o stanowisko: posła, sentaora, premiera, prezydenta?)
+            //Zadanie 5 (Liczby od 1 do 20 wyświetli w 3 potędze)
             {
-                int age;
+                Console.WriteLine($"Zadanie 5 (Liczby od 1 do 20 w 3 potędze)\r\n");
 
-                Console.WriteLine("Zadanie 5 (czy możesz się ubiegać o stanowisko: posła, sentaora, premiera, prezydenta?)");
-
-                Console.WriteLine("Podaj twój wiek.");
-                int.TryParse(Console.ReadLine(), out age);
-
-                string posel = age >= 21 ? "\r\n posła" : "";
-                string senat = age >= 30 ? "\r\n senatora \r\n premiera" : "";
-                string president = age >= 35 ? "\r\n prezydenta" : "";
-
-                Console.WriteLine($"Masz {age} lat, więc możesz się ubiegać o stanowisko: {posel}{senat}{president}");
-                Console.ReadLine();
+                for (int a = 1; a <= 20; a++)
+                {
+                    Console.WriteLine($"Liczba {a} podniesiona do 3 potęgi " + Math.Pow(a, 3));
+                }
             }
 
             ////Zadanie 6 (Kategorie wzrostu)
