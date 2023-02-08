@@ -95,151 +95,131 @@ namespace PracaDomowa
             //    }
             //}
 
-            //Zadanie 5 (Liczby od 1 do 20 wyświetli w 3 potędze)
-            {
-                Console.WriteLine($"Zadanie 5 (Liczby od 1 do 20 w 3 potędze)\r\n");
-
-                for (int a = 1; a <= 20; a++)
-                {
-                    Console.WriteLine($"Liczba {a} podniesiona do 3 potęgi " + Math.Pow(a, 3));
-                }
-            }
-
-            ////Zadanie 6 (Kategorie wzrostu)
+            ////Zadanie 5 (Liczby od 1 do 20 wyświetli w 3 potędze)
             //{
-            //    int growth;
+            //    Console.WriteLine($"Zadanie 5 (Liczby od 1 do 20 w 3 potędze)\r\n");
 
-            //    Console.WriteLine("Zadanie 6 (Jakiej kategorii jest twój wzrost?)");
-
-            //    Console.WriteLine("Podaj twój wzrost w centymetrach.");
-            //    int.TryParse(Console.ReadLine(), out growth);
-
-            //    string result = growth switch
+            //    for (int a = 1; a <= 20; a++)
             //    {
-            //        > 200 => "bardzo wysoki",
-            //        > 180 => "wysoki",
-            //        > 168 => "średniego wzrostu",
-            //        > 150 => "niskiego wzrostu",
-            //        > 140 => "kurduplem",
-            //        <= 140 => "karłem",
-            //    };
+            //        Console.WriteLine($"Liczba {a} podniesiona do 3 potęgi " + Math.Pow(a, 3));
+            //    }
+            //}
 
-            //    Console.WriteLine($"Masz {growth} cm wzrostu, więc jesteś {result}");
+            ////Zadanie 6 (Dla liczb od 0 do 20 oblicza sumę wg wzoru: 1 + ½ +1 / 3 + ¼ itd.)
+            //{
+            //    Console.WriteLine($"Zadanie 6 (Dla liczb od 0 do 20 oblicza sumę wg wzoru: 1 + ½ +1 / 3 + ¼ itd.)");
+            //    Console.WriteLine();
+
+            //    double sum = 0;
+            //    int n = 20;
+
+            //    for (double i = 1; i <= n; i++)
+            //    {
+            //        sum = sum + (1 / i);
+            //    }
+
+            //    Console.WriteLine($"Suma kolejnych liczb 1 + 1/2 + 1/3 + ... + 1/{n} wynosi: {sum}");
             //    Console.ReadLine();
             //}
 
-            ////Zadanie 7 (Największa z 3-ech liczb)
+            ////Zadanie 7 (Diament z gwiazdek)
             //{
-            //int n = 10;
+            //    int n = 10;
 
-            //for (int i = 1; i < n; i++)
+            //    for (int i = 1; i < n; i++)
+            //    {
+            //        for (int j = i; j < n; j++)
+            //        {
+            //            Console.Write(" ");
+            //        }
+
+            //        for (int k = 1; k <= i; k++)
+            //        {
+            //            Console.Write("*");
+            //        }
+
+            //        for (int f = 1; f < i; f++)
+            //        {
+            //            Console.Write("*");
+            //        }
+
+            //        Console.WriteLine();
+            //    }
+
+            //    for (int i = 1; i <= n; i++)
+            //    {
+            //        for (int j = 1; j < i; j++)
+            //        {
+            //            Console.Write(" ");
+            //        }
+
+            //        for (int k = i; k <= n; k++)
+            //        {
+            //            Console.Write("*");
+            //        }
+
+            //        for (int f = i; f < n; f++)
+            //        {
+            //            Console.Write("*");
+            //        }
+
+            //        Console.WriteLine();
+            //    }
+            //}
+
+            ////Zadanie 8 (Odwrócenie wpisanego tekstu)
             //{
-            //    for (int j = i; j < n; j++)
-            //    {
-            //        Console.Write(" ");
-            //    }
+            //    Console.WriteLine("Zadanie 8 (Odwrócenie wpisanego tekstu)");
+            //    Console.WriteLine();
+            //    Console.WriteLine("Wpisz dowolny ciąg znaków:");
 
-            //    for (int k = 1; k < i; k++)
-            //    {
-            //        Console.Write("*");
-            //    }
+            //    string txt = Console.ReadLine();
+            //    int len = txt.Length;
 
-            //    for (int f = 1; f <= i; f++)
-            //    {
-            //        Console.Write("*");
-            //    }
+            //    Console.WriteLine();
 
+            //    for (int t = len - 1; t >= 0; t--)
+            //    {
+            //        Console.Write(txt[t]);
+            //    }
             //    Console.WriteLine();
             //}
 
-            //for (int i = 1; i <= n; i++)
-            //{
-            //    for (int j = 1; j < i; j++)
-            //    {
-            //        Console.Write(" ");
-            //    }
+            //Zadanie 9 (Zmiana liczby dzięsietnej na binarną)
+            {
+                Console.WriteLine("Zadanie 9 (Zmiana liczby dzięsietnej na binarną)");
 
-            //    for (int k = i; k <= n; k++)
-            //    {
-            //        Console.Write("*");
-            //    }
+                Console.WriteLine("Wpisz dowolną liczbę dziesiętną:");
 
-            //    for (int f = i; f < n; f++)
-            //    {
-            //        Console.Write("*");
-            //    }
+                int number = int.Parse(Console.ReadLine());
+                string revBin = "";
+                
+                if (number == 0)
+                {
+                    Console.WriteLine("0 w systemie dziętnym, to w systemie binarnym także 0");
+                }
+                else
+                {
+                    for (int i = number; i > 0; i = i / 2)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            revBin += "0";
+                        }
+                        else
+                        {
+                            revBin += "1";
+                        }
+                    }
 
-            //    Console.WriteLine();
-            //}
-
-            ////Zadanie 8 (prawo do miejsca na studiach)
-            //{
-            //    Console.WriteLine("Zadanie 8 (prawo do miejsca na studiach)");
-
-            //    Console.WriteLine($"By sprawdzić czy możesz ubiegać się o miejsce na studiach \r\npodaj oceny z matury z podanych niżej przedmiotów: ");
-            //    Console.WriteLine("z matematyki: ");
-            //    int matma = int.Parse(Console.ReadLine());
-
-            //    Console.WriteLine("z fizyki: ");
-            //    int fizyka = int.Parse(Console.ReadLine());
-
-            //    Console.WriteLine("z chemii: ");
-            //    int chemia = int.Parse(Console.ReadLine());
-
-            //    string result;
-            //    {
-            //        if ((matma > 70 && fizyka > 55 && chemia > 45 && (matma + fizyka + chemia > 180))
-            //            || (matma + fizyka > 150)
-            //            || (matma + chemia > 150))
-            //        {
-            //            result = "może się";
-            //        }
-            //        else
-            //        {
-            //            result = "nie może się";
-            //        }
-            //    }
-
-            //    Console.WriteLine($"Kandydat {result} ubiegać o miejsce na studiach");
-            //}
-
-            ////Zadanie 9 (określenie typu temperatury)
-            //{
-            //    Console.WriteLine("Zadanie 9 (określenie typu temperatury)");
-
-            //    Console.WriteLine($"Podaj jaka panuje temperatura na dworze:");
-            //    int temp = int.Parse(Console.ReadLine());
-
-            //    string result;
-            //    {
-            //        if (temp >= 40)
-            //        {
-            //            result = "A weź wyprowadzam się na Alaskę";
-            //        }
-            //        else if (temp >= 30)
-            //        {
-            //            result = "Zaczyna być słabo, bo gorąco";
-            //        }
-            //        else if (temp >= 20)
-            //        {
-            //            result = "W sam raz";
-            //        }
-            //        else if (temp >= 10)
-            //        {
-            //            result = "Chłodno";
-            //        }
-            //        else if (temp >= 0)
-            //        {
-            //            result = "Zimno";
-            //        }
-            //        else
-            //        {
-            //            result = "Cholernie piździ";
-            //        }
-            //    }
-
-            //    Console.WriteLine($"Jaka pogoda? {result}");
-            //}
+                    Console.Write($"Liczba {number} w systemie binarnym to: ");
+                    for (int i = revBin.Length; i > 0; i--)
+                    {
+                        Console.Write(revBin[i - 1]);
+                    }
+                    Console.WriteLine(".");
+                }
+            }
 
             ////Zadanie 10 (możliwość zbudowania trójkąta z podanych długości boków)
             //{
@@ -268,124 +248,6 @@ namespace PracaDomowa
             //    }
 
             //    Console.WriteLine($"Z podanych długości boków {result} zbudować trójką");
-            //}
-
-            ////Zadanie 11 (Kategorie wzrostu)
-            //{
-            //    int ocena;
-
-            //    Console.WriteLine("Zadanie 11 (ocena słownie)");
-
-            //    Console.WriteLine("Podaj otrzymaną ocenę");
-            //    int.TryParse(Console.ReadLine(), out ocena);
-
-            //    switch (ocena)
-            //    {
-            //        case 1:
-            //            Console.WriteLine("Niedostateczny");
-            //            break;
-            //        case 2:
-            //            Console.WriteLine("Dopuszczający");
-            //            break;
-            //        case 3:
-            //            Console.WriteLine("Dostateczny");
-            //            break;
-            //        case 4:
-            //            Console.WriteLine("Dobry");
-            //            break;
-            //        case 5:
-            //            Console.WriteLine("Bardzo dobry");
-            //            break;
-            //        case 6:
-            //            Console.WriteLine("Celujący");
-            //            break;
-            //    }
-
-            //    Console.ReadLine();
-            //}
-
-            ////Zadanie 12 (Nazwy dni tygodnia)
-            //{
-            //    int dayNo;
-
-            //    Console.WriteLine("Zadanie 12 (Nazwy dni tygodnia)");
-
-            //    Console.WriteLine("Podaj numer dnia tygodnia, a podam ci jego nazwę");
-            //    int.TryParse(Console.ReadLine(), out dayNo);
-
-            //    switch (dayNo)
-            //    {
-            //        case 1:
-            //            Console.WriteLine("Dzień nr 1, to poniedziałek");
-            //            break;
-            //        case 2:
-            //            Console.WriteLine("Dzień nr 2, to wtorek");
-            //            break;
-            //        case 3:
-            //            Console.WriteLine("Dzień nr 3, to środa");
-            //            break;
-            //        case 4:
-            //            Console.WriteLine("Dzień nr 4, to czwartek");
-            //            break;
-            //        case 5:
-            //            Console.WriteLine("Dzień nr 5, to piątek");
-            //            break;
-            //        case 6:
-            //            Console.WriteLine("Dzień nr 6, to sobota");
-            //            break;
-            //        case 7:
-            //            Console.WriteLine("Dzień nr 7, to niedziela");
-            //            break;
-            //    }
-
-            //    Console.ReadLine();
-            //}
-
-            ////Zadanie 13 (operacje na dwóch podanych liczbach)
-            //{
-            //    Console.WriteLine("Podaj pierwszą liczbę całkowitą:");
-            //    int no1 = int.Parse(Console.ReadLine());
-
-            //    Console.WriteLine("Podaj drugą liczbę całkowitą:");
-            //    int no2 = int.Parse(Console.ReadLine());
-
-            //    Console.WriteLine("Podaj numer operacji do wykonania:");
-            //    Console.WriteLine("1. Dodawanie");
-            //    Console.WriteLine("2. Odejmowanie");
-            //    Console.WriteLine("3. Mnożenie");
-            //    Console.WriteLine("4. Dzielenie");
-
-            //    int operation = int.Parse(Console.ReadLine());
-
-            //    double result;
-
-            //    switch (operation)
-            //    {
-            //        case 1:
-            //            result = no1 + no2;
-            //            Console.WriteLine($"Twój wynik to: {result}");
-            //            break;
-            //        case 2:
-            //            result = no1 - no2;
-            //            Console.WriteLine($"Twój wynik to: {result}");
-            //            break;
-            //        case 3:
-            //            result = no1 * no2;
-            //            Console.WriteLine($"Twój wynik to: {result}");
-            //            break;
-            //        case 4:
-            //            if (no2 == 0)
-            //            {
-            //                Console.WriteLine("Dzielenie przez 0 jest zabronione!");
-            //                break;
-            //            }
-            //            result = (double)no1 / no2;
-            //            Console.WriteLine($"Twój wynik to: {result}");
-            //            break;
-            //        default:
-            //            Console.WriteLine("Wybrana operacja nie jest dostępna");
-            //            break;
-            //    }
             //}
 
 
