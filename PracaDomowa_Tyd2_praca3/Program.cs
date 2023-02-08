@@ -51,22 +51,20 @@ namespace PracaDomowa
             //    Console.ReadLine();
             //}
 
-            ////Zadanie 3 (implementacja ciąg Fibonacciego i wyświetlenie go na ekranie)
-            //{
-            //    int n = 10;
-            //    int a = 0;
-            //    int b = 1;
+            //Zadanie 3 (implementacja ciąg Fibonacciego i wyświetlenie go na ekranie)
+            {
+                int n = 10, a = 0, b = 1;
 
-            //    Console.WriteLine($"Zadanie 3 (implementacja ciągu Fibonacciego i wyświetlenie go na ekranie)\r\n");
-            //    Console.WriteLine(a);
+                Console.WriteLine($"Zadanie 3 (implementacja ciągu Fibonacciego i wyświetlenie go na ekranie)\r\n");
+                Console.WriteLine(a);
 
-            //    for (int i = 0; i <= n; i++)
-            //    {
-            //        Console.WriteLine(b);
-            //        b += a;
-            //        a = b - a;
-            //    }
-            //}
+                for (int i = 0; i <= n; i++)
+                {
+                    Console.WriteLine(b);
+                    b += a;
+                    a = b - a;
+                }
+            }
 
             ////Zadanie 4 (Po podaniu liczby całkowitej wyświetli piramidę liczb od 1 do podanej liczby)
             //{
@@ -186,69 +184,67 @@ namespace PracaDomowa
             //}
 
             //Zadanie 9 (Zmiana liczby dzięsietnej na binarną)
-            {
-                Console.WriteLine("Zadanie 9 (Zmiana liczby dzięsietnej na binarną)");
-
-                Console.WriteLine("Wpisz dowolną liczbę dziesiętną:");
-
-                int number = int.Parse(Console.ReadLine());
-                string revBin = "";
-                
-                if (number == 0)
-                {
-                    Console.WriteLine("0 w systemie dziętnym, to w systemie binarnym także 0");
-                }
-                else
-                {
-                    for (int i = number; i > 0; i = i / 2)
-                    {
-                        if (i % 2 == 0)
-                        {
-                            revBin += "0";
-                        }
-                        else
-                        {
-                            revBin += "1";
-                        }
-                    }
-
-                    Console.Write($"Liczba {number} w systemie binarnym to: ");
-                    for (int i = revBin.Length; i > 0; i--)
-                    {
-                        Console.Write(revBin[i - 1]);
-                    }
-                    Console.WriteLine(".");
-                }
-            }
-
-            ////Zadanie 10 (możliwość zbudowania trójkąta z podanych długości boków)
             //{
-            //    Console.WriteLine("Zadanie 10 (możliwość zbudowania trójkąta z podanych długości boków)");
+            //    Console.WriteLine("Zadanie 9 (Zmiana liczby dzięsietnej na binarną)");
 
-            //    Console.WriteLine($"Sprawdzimy czy z podanych przez ciebie długości boków można zbudować trójkąt.\r\nPodaj długości następujących boków:");
-            //    Console.WriteLine("długość boku a: ");
-            //    int a = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("Wpisz dowolną liczbę dziesiętną:");
 
-            //    Console.WriteLine("długość boku b: ");
-            //    int b = int.Parse(Console.ReadLine());
+            //    int number = int.Parse(Console.ReadLine());
+            //    string revBin = "";
 
-            //    Console.WriteLine("długość boku c: ");
-            //    int c = int.Parse(Console.ReadLine());
-
-            //    string result;
+            //    if (number == 0)
             //    {
-            //        if ((a + b > c) && (a + c > b) && (b + c > a))
-            //        {
-            //            result = "można";
-            //        }
-            //        else
-            //        {
-            //            result = "nie można";
-            //        }
+            //        Console.WriteLine("0 w systemie dziętnym, to w systemie binarnym także 0");
             //    }
+            //    else
+            //    {
+            //        for (int i = number; i > 0; i = i / 2)
+            //        {
+            //            if (i % 2 == 0)
+            //            {
+            //                revBin += "0";
+            //            }
+            //            else
+            //            {
+            //                revBin += "1";
+            //            }
+            //        }
 
-            //    Console.WriteLine($"Z podanych długości boków {result} zbudować trójką");
+            //        Console.Write($"Liczba {number} w systemie binarnym to: ");
+            //        for (int i = revBin.Length; i > 0; i--)
+            //        {
+            //            Console.Write(revBin[i - 1]);
+            //        }
+            //        Console.WriteLine(".");
+            //    }
             //}
+
+            //Zadanie 10 (Najmnniejszy wspólny podzielnik)
+            {
+                Console.WriteLine("Zadanie 10 (Najmnniejszy wspólny podzielnik");
+
+                Console.WriteLine("Wpisz pierwszą dowolną liczbę całkowitą:");
+                int number1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Wpisz drugą dowolną liczbę całkowitą:");
+                int number2 = int.Parse(Console.ReadLine());
+
+                int multiplication = number1 * number2;
+
+                while (number1 != number2)
+                {
+                    if (number1 > number2)
+                    {
+                        number1 -= number2;
+                    }
+                    else
+                    {
+                        number2 -= number1;
+                    }
+                }
+
+                Console.WriteLine(multiplication / number1);
+            }
 
 
         }
