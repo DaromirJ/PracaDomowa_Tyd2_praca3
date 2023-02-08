@@ -219,7 +219,7 @@ namespace PracaDomowa
                 }
             }
 
-            Zadanie 10(Najmnniejszy wspólny podzielnik)
+            //Zadanie 10(Najmnniejszy wspólny podzielnik)
             {
                 Console.WriteLine("Zadanie 10 (Najmnniejszy wspólny podzielnik");
 
