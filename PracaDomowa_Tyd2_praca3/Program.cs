@@ -8,31 +8,32 @@ namespace PracaDomowa
         {
 
             //Zadanie 1 (Ile jest liczb pierwszych w liczbie 100)
-
-            int counter = 0;
-            int a = 20;
-
-            for (int i = 2; i <= a; i++)
             {
-                bool Prime = true;
+                int counter = 0;
+                int a = 20;
 
-                for (int j = 2; j <= Math.Sqrt(i); j++)
+                for (int i = 2; i <= a; i++)
                 {
-                    if (i % j == 0)
+                    bool Prime = true;
+
+                    for (int j = 2; j <= Math.Sqrt(i); j++)
                     {
-                        Prime = false;
-                        break;
+                        if (i % j == 0)
+                        {
+                            Prime = false;
+                            break;
+                        }
+
                     }
 
+                    if (Prime)
+                        counter++;
                 }
-
-                if (Prime)
-                    counter++;
+                Console.WriteLine($"Zadanie 1 (Ile jest liczb pierwszych w liczbie 100)");
+                Console.WriteLine($"W liczbie 100 jest {counter} liczb pierwszych");
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
-            Console.WriteLine($"Zadanie 1 (Ile jest liczb pierwszych w liczbie 100)");
-            Console.WriteLine($"W liczbie 100 jest {counter} liczb pierwszych");
-            Console.ReadLine();
-
 
             //Zadanie 2 (Lista liczb parzystych w liczbie 1000)
             {
@@ -48,6 +49,7 @@ namespace PracaDomowa
                     }
                     n++;
                 } while (n <= 1000);
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
                 Console.ReadLine();
             }
 
@@ -64,21 +66,24 @@ namespace PracaDomowa
                     b += a;
                     a = b - a;
                 }
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
 
             //Zadanie 4 (Po podaniu liczby całkowitej wyświetli piramidę liczb od 1 do podanej liczby)
             {
+                Console.WriteLine($"Zadanie 4 (Po podaniu liczby całkowitej wyświetla piramidę liczb od 1 do podanej liczby)\r\n");
+
                 Console.WriteLine("Podaj dowolną liczbę całkowitą\r\n");
                 int a = int.Parse(Console.ReadLine());
                 Console.WriteLine();
 
-                Console.WriteLine($"Zadanie 4 (Po podaniu liczby całkowitej wyświetla piramidę liczb od 1 do podanej liczby)\r\n");
-
                 int number = 1;
+                Console.WriteLine();
 
-                for (int i = 1; i < a; i++)
+                for (int i = 1; i < a/2; i++)
                 {
-                    for (int j = 1; j < i; j++)
+                    for (int j = 0; j < i; j++)
                     {
                         if (number > a)
                             break;
@@ -86,11 +91,10 @@ namespace PracaDomowa
                         Console.Write(" " + number);
                         number++;
                     }
-                    if (number > a)
-                        break;
-
                     Console.WriteLine();
                 }
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
 
             //Zadanie 5 (Liczby od 1 do 20 wyświetli w 3 potędze)
@@ -101,6 +105,8 @@ namespace PracaDomowa
                 {
                     Console.WriteLine($"Liczba {a} podniesiona do 3 potęgi " + Math.Pow(a, 3));
                 }
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
 
             //Zadanie 6 (Dla liczb od 0 do 20 oblicza sumę wg wzoru: 1 + ½ +1 / 3 + ¼ itd.)
@@ -115,8 +121,8 @@ namespace PracaDomowa
                 {
                     sum = sum + (1 / i);
                 }
-
                 Console.WriteLine($"Suma kolejnych liczb 1 + 1/2 + 1/3 + ... + 1/{n} wynosi: {sum}");
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
                 Console.ReadLine();
             }
 
@@ -163,6 +169,8 @@ namespace PracaDomowa
 
                     Console.WriteLine();
                 }
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
 
             //Zadanie 8 (Odwrócenie wpisanego tekstu)
@@ -180,10 +188,11 @@ namespace PracaDomowa
                 {
                     Console.Write(txt[t]);
                 }
-                Console.WriteLine();
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
 
-            Zadanie 9(Zmiana liczby dzięsietnej na binarną)
+            //Zadanie 9(Zmiana liczby dzięsietnej na binarną)
             {
                 Console.WriteLine("Zadanie 9 (Zmiana liczby dzięsietnej na binarną)");
 
@@ -217,6 +226,8 @@ namespace PracaDomowa
                     }
                     Console.WriteLine(".");
                 }
+                Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+                Console.ReadLine();
             }
 
             //Zadanie 10(Najmnniejszy wspólny podzielnik)
@@ -245,8 +256,8 @@ namespace PracaDomowa
 
                 Console.WriteLine(multiplication / number1);
             }
-
-
+            Console.WriteLine($"\r\n____________________________________________________________________________\r\n");
+            Console.ReadLine();
         }
     }
 }
